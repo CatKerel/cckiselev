@@ -14,7 +14,7 @@ def get_text(filename):
     texts = list()
     for elem in elems:
         elem_text = str(elem).replace('>', '<').split('<')
-        text = [elem_text[i] for i in range(len(elem_text)) if not i % 2 and elem_text[i] not in ['', '\n']]
+        text = [elem_text[i].strip() for i in range(len(elem_text)) if not i % 2 and elem_text[i] not in ['', '\n']]
         #lines = (line.strip() for line in elem.text.splitlines())
         #chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
         #text = '\n'.join(chunk for chunk in chunks if chunk)
