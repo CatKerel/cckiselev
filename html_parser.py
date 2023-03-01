@@ -10,7 +10,7 @@ def get_soup(filename):
 
 def get_text(filename):
     soup = get_soup(filename)
-    elems = soup.find_all(['h1', 'h2', 'h3', 'h4', 'li', 'p', 'a', 'strong', 'span', 'button', 'i'])
+    elems = soup.find_all(['h1', 'h2', 'h3', 'h4', 'li', 'p', 'a', 'strong', 'span', 'button', 'i', 'label', 'option', 'input'])
     texts = list()
     for elem in elems:
         elem_text = str(elem).replace('>', '<').split('<')
